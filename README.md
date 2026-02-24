@@ -1,4 +1,4 @@
-Gym Tracker Database
+**Gym Tracker Database**
 
 **Overview** 
 
