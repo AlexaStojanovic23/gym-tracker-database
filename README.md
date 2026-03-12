@@ -141,3 +141,18 @@ The implemented application version later introduced:
 - workout_log_sets
 
 The core logic remained similar, but the final application schema was simplified to better match the backend application flow.
+
+## Query Files
+
+This project includes two SQL query collections:
+
+- `queries.sql` – analytical queries written for the initial schema design
+- `queries_v2.sql` – updated analytical queries adapted to the backend implementation schema
+
+These queries demonstrate:
+
+- filtering using `WHERE`
+- aggregations using `COUNT`, `SUM`, `AVG`
+- grouped reporting with `GROUP BY`
+- post-aggregation filtering using `HAVING`
+- nested logic using subqueries
