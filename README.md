@@ -63,45 +63,10 @@ This structure enables:
 - Frequency tracking
 - Performance analysis
 
-**Example Analytical Queries**
+Query Files
 
-**1** - Most Performed Exercise (by number of sets)
-
-SELECT e.name, COUNT(*) AS total_sets
-
-FROM sets s
-
-JOIN daily_exercises de ON de.id = s.daily_exercise_id
-
-JOIN daily_workouts dw ON dw.id = de.daily_workout_id
-
-JOIN daily_logs dl ON dl.id = dw.daily_log_id
-
-JOIN exercises e ON e.id = de.exercise_id
-
-WHERE dl.user_id = 1
-
-GROUP BY e.name
-
-ORDER BY total_sets DESC
-
-LIMIT 1;
-
-**2** - Total Lifted Volume Per Day
-
-SELECT dl.log_date, SUM(s.reps * s.weight_kg) AS total_volume
-
-FROM sets s
-
-JOIN daily_exercises de ON de.id = s.daily_exercise_id
-
-JOIN daily_workouts dw ON dw.id = de.daily_workout_id
-
-JOIN daily_logs dl ON dl.id = dw.daily_log_id
-
-WHERE dl.user_id = 1 AND dl.log_date = '2026-02-19'
-
-GROUP BY dl.log_date;
+- queries.sql – analytical queries written for the initial schema design
+- queries_v2.sql – updated analytical queries adapted to the backend implementation schema
 
 **Technical Highlights**
 
