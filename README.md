@@ -122,3 +122,22 @@ This project demonstrates:
 - Data integrity implementation
 - Analytical SQL query writing
 - Real-world application structure
+
+## Project Evolution
+
+This repository contains the initial relational database design for the Gym Tracker application.
+
+During backend development, the production database schema evolved into a more backend-oriented structure.
+
+The original design used:
+- daily_logs
+- daily_workouts
+- daily_exercises
+- sets
+
+The implemented application version later introduced:
+- workout_logs
+- workout_log_exercises
+- workout_log_sets
+
+The core logic remained similar, but the final application schema was simplified to better match the backend application flow.
